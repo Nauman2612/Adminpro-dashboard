@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" class="light-theme">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="logo-and-name">
+                <div class="close-btn">
+                    <span class="material-symbols-sharp">close</span>
+                </div>
+                 <!-- <img src="logo.url"alt="logo"> -->
+                  <!--press ctrl + / to uncomment this and upload you logo url-->
+                    
+                  <div class="logo">NA</div>
+                <h2 class="name">DesignerN</h2>
+                <div class="slide-menu-btn">
+                    <span class="material-symbols-sharp">menu</span>
+                </div>
+
+
+            </div>
+
+            <nav class="sidebar" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="#"><span class="material-symbols-sharp" aria-hidden="true">grid_view</span>
+                            <h3>Dashboard</h3>
+                        </a></li>
+                    <li><a href="#" class="active"><span class="material-symbols-sharp"
+                                aria-hidden="true">person_outline</span>
+                            <h3>Customers</h3>
+                        </a></li>
+                    <li><a href="#"><span class="material-symbols-sharp" aria-hidden="true">insights</span>
+                            <h3>Analytics</h3>
+                        </a></li>
+                    <li><a href="#"><span class="material-symbols-sharp" aria-hidden="true">mail_outline</span>
+                            <h3>Messages</h3><span class="msg_count">14</span>
+                        </a></li>
+                    <li><a href="#"><span class="material-symbols-sharp" aria-hidden="true">receipt_long</span>
+                            <h3>Orders</h3>
+                        </a></li>
+                    <li><a href="#"><span class="material-symbols-sharp" aria-hidden="true">report_gmailerrorred</span>
+                            <h3>Reports</h3>
+                        </a></li>
+                    <li><a href="#"><span class="material-symbols-sharp" aria-hidden="true">settings</span>
+                            <h3>Settings</h3>
+                        </a></li>
+                    <li><a href="#"><span class="material-symbols-sharp" aria-hidden="true">add</span>
+                            <h3>Add Product</h3>
+                        </a></li>
+                    <li><a href="#"><span class="material-symbols-sharp" aria-hidden="true">logout</span>
+                            <h3>Logout</h3>
+                        </a></li>
+                </ul>
+            </nav>
+
+        </aside>
+        <main>
+
+
+
+            <h1 class="Dashboard">Dashboard</h1>
+            <div class="date">
+                <input type="date">
+            </div>
+            <!-- <div class="insighs-and-graph"> -->
+            <div class="insights">
+                <div class="card">
+                    <span class="material-symbols-sharp trending-up">trending_up</span>
+                    <div class="middle">
+                        <div class="sales">
+                            <h3> Sales</h3>
+                        </div>
+
+                        <div class="progress">
+                            <h1>$25,000</h1>
+                            <span>
+                                <svg class="progress-circle" width="70" height="70" style="--percent: 81">
+                                    <circle class="bg" cx="35" cy="35" r=" 30" />
+                                    <circle class="fg" cx="35" cy="35" r="30" />
+                                </svg>
+                                <div class="number">
+                                    <p>77%</p>
+                                </div>
+
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <span class="material-symbols-sharp trending-down">trending_down</span>
+                    <div class="middle">
+                        <div class="sales">
+                            <h3> Expenses</h3>
+                        </div>
+
+                        <div class="progress">
+                            <h1>$25,000</h1>
+                            <span>
+                                <svg class="progress-circle" width="70" height="70" style="--percent: 81">
+                                    <circle class="bg" cx="35" cy="35" r=" 30" />
+                                    <circle class="fg" cx="35" cy="35" r="30" />
+                                </svg>
+                                <div class="number">
+                                    <p>65%</p>
+                                </div>
+
+                            </span>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <span class="material-symbols-sharp account-balance">account_balance</span>
+                    <div class="middle">
+                        <div class="sales">
+                            <h3> Income</h3>
+
+                        </div>
+
+                        <div class="progress">
+                            <h1>$25,000</h1>
+                            <span>
+                                <svg class="progress-circle" width="70" height="70" style="--percent: 81">
+                                    <circle class="bg" cx="35" cy="35" r=" 30" />
+                                    <circle class="fg" cx="35" cy="35" r="30" />
+                                </svg>
+                                <div class="number">
+                                    <p>9%</p>
+                                </div>
+
+                            </span>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="charts-row">
+                <div class="line-graph">
+                    <canvas id="line-chart"></canvas>
+                </div>
+                <div class="pie-graph">
+                    <canvas id="productPieChart"></canvas>
+                </div>
+            </div>
+
+            <div class="recent-orders">
+                <h2>Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Product Number</th>
+                            <th>Payment</th>
+                            <th class="Status">Status</th>
+                            <th class="Details">Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>fordable mini Drone</td>
+                            <td>#85630</td>
+                            <td>Due</td>
+                            <td class="Pending">Pending</td>
+                            <td class="details">Details</td>
+                        </tr>
+                        <tr>
+                            <td> USB </td>
+                            <td>#85631</td>
+                            <td>Due</td>
+                            <td class="Delivered">Delivered</td>
+                            <td class="details">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Footbball</td>
+                            <td>#85632</td>
+                            <td>Due</td>
+                            <td class="Canceled">Canceled</td>
+                            <td class="details">Details</td>
+                        </tr>
+                        <tr>
+                            <td>Camera </td>
+                            <td>#85633</td>
+                            <td>Due</td>
+                            <td class="Delivered">Delivered</td>
+                            <td class="details">Details</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+
+
+
+        </main>
+        <!-- start right section -->
+        <section class="right">
+            <!-- top section start here -->
+            <div class="top">
+                <div class="menu-n-toggler">
+                    <button class="menu-btn">
+                        <span class="material-symbols-sharp menu-icon">menu</span>
+                    </button>
+                    <div class="toggler-btns">
+                        <span class="material-symbols-sharp light-mode active-theme-background">light_mode</span>
+                        <span class="material-symbols-sharp dark-mode">dark_mode</span>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-info">
+                        <h4>Nauman</h4>
+                        <p>Admin</p>
+                    </div>
+                    <div class="profile-img">
+                        <img src="mypicture.jpg" alt="User Avatar">
+                    </div>
+                </div>
+            </div>
+            <!-- top section end here -->
+            <div class="recent-updates">
+                <h2>Recent Updates</h2>
+                <div class="updates">
+
+                    <div class="update">
+                        <div class="profile-img">
+                            <img src="mypicture.jpg" alt="User Avatar">
+                        </div>
+                        <div class="message">
+                            <p><b>Nauman</b> <br> received his Order</p>
+                            <small class="time-ago">2 hours ago</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-img">
+                            <img src="mypicture.jpg" alt="User Avatar">
+                        </div>
+                        <div class="message">
+                            <p><b>Nauman</b> <br> received his Order</p>
+                            <small class="time-ago">2 minutes ago</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-img">
+                            <img src="mypicture.jpg" alt="User Avatar">
+                        </div>
+                        <div class="message">
+                            <p><b>Nauman</b> <br> received his Order</p>
+                            <small class="time-ago">20 minutes ago</small>
+                        </div>
+                    </div>
+
+                    <div class="update">
+                        <div class="profile-img">
+                            <img src="mypicture.jpg" alt="User Avatar">
+                        </div>
+                        <div class="message">
+                            <p><b>Nauman</b> <br> received his Order</p>
+                            <small class="time-ago">20 minutes ago</small>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </section>
+        <!-- end right section -->
+    </div>
+    <!-- end Container -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
